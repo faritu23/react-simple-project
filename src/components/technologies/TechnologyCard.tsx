@@ -39,32 +39,9 @@ const TechnologyCard = ({technology, isAdded, onAddToStack}: TechnologyCardProps
                         </>
 
                     ) : " Add to Stack"}
-                    {/* {isAdded?(
-                        
-                        <div className="flex items-center justify-center gap-2">
-                            <FaCheck />
-                            <span>Added</span>
-                            
-                        </div>
-                       
-                    ):
-                    (
-                        "Add to Stack"
-                    )} */}
-
-                    {/* {isAdded ? (
-                        <>
-                        <FaCheck />
-                        <span>Added</span>
-                        </>
-                    ) : (
-                        "Add to Stack"
-                    )} */}
                     
                 </button>
-                
             </div>
-            
             </div>
             );
 };

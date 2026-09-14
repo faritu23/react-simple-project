@@ -11,13 +11,11 @@ interface TecnologyProps{
 const Technologies = ({technologyPromise}:TecnologyProps) => {
     const technologies=use(technologyPromise)// use is a hook
     const [stack, setStack] = useState<ITecnology[]>([])
-
     const addToStack = (technology: ITecnology) => {
         if (stack.some((item) => item.id === technology.id)) {
             toast.warning(`${technology.name} is already in your stack.`)
             return
         }
-
         setStack((currentStack) => [...currentStack, technology])
         toast.success(`${technology.name} added to your stack.`)
     }
@@ -25,13 +23,11 @@ const Technologies = ({technologyPromise}:TecnologyProps) => {
     const removeFromStack = (technologyId: string) => {
         const technology = stack.find((item) => item.id === technologyId)
         setStack((currentStack) => currentStack.filter((item) => item.id !== technologyId))
-        if (technology) {
-            toast.success(`${technology.name} removed from your stack.`)
-        }
+        if (technology)  toast.success(`${technology.name} removed from your stack.`)
     }
 
     const removeAll = () => {
-        if (stack.length === 0) {
+        if (!stack.length) {
             toast.info('Your stack is already empty.')
             return
         }

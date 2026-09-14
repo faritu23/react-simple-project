@@ -30,8 +30,7 @@ const TechnologyCard = ({technology, isAdded, onAddToStack}: TechnologyCardProps
                     </div>
                 </div>
                 
-                <button onClick={() => onAddToStack(technology)} className="btn btn-block" disabled={isAdded}>
-                    
+                <button onClick={() => onAddToStack(technology)} className={`btn btn-block ${isAdded? "bg-green-100 text-green-800 cursor-not-allowed":"bg-black text-white hover:bg-gray-500" }`} disabled={isAdded}>
                     {isAdded ? (
                         <>
                         <FaCheck/>
@@ -39,6 +38,7 @@ const TechnologyCard = ({technology, isAdded, onAddToStack}: TechnologyCardProps
                         </>
 
                     ) : " Add to Stack"}
+
                     
                 </button>
             </div>

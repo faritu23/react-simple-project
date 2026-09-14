@@ -21,7 +21,7 @@ function App() {
     <>
     <Navbar></Navbar>
     <Hero></Hero>
-    <Suspense fallback='<h2>Loading..</h2>
+    <Suspense fallback='Loading..
     '>
     <Technologies technologyPromise={technologyPromise}></Technologies>
 

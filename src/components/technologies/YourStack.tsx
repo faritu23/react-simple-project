@@ -13,15 +13,16 @@ function YourStack({stack,removeFromStack,removeAll}: YourStackProps) {
       <div className="flex items-center justify-between ">
         <div>
           <h2 className="text-[18px] font-semibold">Your Stack </h2>
-          <p className="text-xs text-gray-400"> {stack.length} Technology Selected </p>
+          <p className="text-xs text-gray-400"> {
+              stack.length?(`${stack.length} Technology Selected`):`No technologies selected yet.`}
+          </p>
         </div>
       </div>
 
 
           {!stack.length ? (
             <div className="py-12 text-center border border-gray-200 rounded-2xl mt-3">
-              <p className="text-sm text-gray-400">No technologies selected yet. </p>
-              <p className="mt-2 text-xs text-gray-400"> Add technologies from the list.</p>
+              <p className="text-sm text-gray-400">Your stack is empty. </p>
             </div>
           ) : ( <div className="mt-4 space-y-2">
 

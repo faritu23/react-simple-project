@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import Banner from '../assets/banner-stack.png'
 
 const Hero = () => {

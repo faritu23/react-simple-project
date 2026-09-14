@@ -1,5 +1,4 @@
 
-import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Technologies from './components/technologies/Technologies'
@@ -11,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 const technologyFetch=async():Promise<ITecnology[]>=>{
-  const res=await fetch('/public/data/technologies.json')
+  const res=await fetch('/data/technologies.json')
   const data= await res.json()
   return data
 }

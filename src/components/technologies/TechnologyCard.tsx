@@ -1,7 +1,6 @@
 import type { ITecnology } from '../../Types/TecnologyType';
 import { CiStar } from 'react-icons/ci';
 import { FaCheck } from "react-icons/fa"
-import YourStack from './YourStack';
 interface TechnologyCardProps {
     technology: ITecnology
     isAdded: boolean
@@ -15,11 +14,8 @@ const TechnologyCard = ({technology, isAdded, onAddToStack}: TechnologyCardProps
             <div className="card bg-base-50 w-[300px] h-80 mt-4 shadow-sm ">
             <figure>
                 <div className='flex justify-between items-center w-full px-5 pt-5 '>
-                    <img
-                    src={technology.icon}
-                    alt={technology.name} className='w-12 font-medium bg-amber-200'/>
+                    <img src={technology.icon} alt={technology.name} className='w-12 font-medium'/>
                     <button type="button" className="btn rounded-full" >{technology.badge}</button>
-
                 </div>
             </figure>
             <div className="card-body">
@@ -29,8 +25,8 @@ const TechnologyCard = ({technology, isAdded, onAddToStack}: TechnologyCardProps
                     <button className="btn btn-soft my-2 text-gray-500">{technology.category}</button>
                     <span className='text-gray-500'>{technology.difficulty}</span>
                     <div className='flex justify-center items-center'>
-                    <CiStar className='text-yellow-700' />
-                    <span>  {technology.rating}</span>
+                        <CiStar className='text-yellow-700' />
+                        <span>  {technology.rating}</span>
                     </div>
                 </div>
                 

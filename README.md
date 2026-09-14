@@ -3,12 +3,7 @@
 ## Description:Dev Stack is a React-based technology management website where users can explore different technologies and add their favorite technologies to their personal stack.
 
 ## Technologies Used
-1.React
-2.JavaScript
-3. Tailwind CSS
-4. DaisyUI
-5. React Icons
-6. JSON
+React,JavaScript,Tailwind CSS,DaisyUI,React Icons,JSON
 
 ## Features
 1. Browse Technologies:Users can explore different technologies and view their details.
